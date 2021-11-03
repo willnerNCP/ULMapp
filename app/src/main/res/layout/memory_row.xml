@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/memory_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/ip_0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_rect"
+        app:layout_constraintBottom_toBottomOf="@id/byte_0"
+        app:layout_constraintEnd_toEndOf="@id/byte_3"
+        app:layout_constraintStart_toStartOf="@id/byte_0"
+        app:layout_constraintTop_toTopOf="@id/byte_0"
+        android:visibility="invisible"/>
+
+    <View
+        android:id="@+id/ip_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_rect"
+        app:layout_constraintBottom_toBottomOf="@id/byte_0"
+        app:layout_constraintEnd_toEndOf="@id/byte_7"
+        app:layout_constraintStart_toStartOf="@id/byte_4"
+        app:layout_constraintTop_toTopOf="@id/byte_0"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/byte_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="00"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/byte_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/byte_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="00"
+        android:fontFamily="monospace"
+        app:layout_constraintStart_toEndOf="@id/byte_0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/byte_2"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    
+    <TextView
+        android:id="@+id/byte_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="00"
+        android:fontFamily="monospace"
+        app:layout_constraintStart_toEndOf="@id/byte_1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/byte_3"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <TextView
+        android:id="@+id/byte_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="00"
+        android:fontFamily="monospace"
+        app:layout_constraintStart_toEndOf="@id/byte_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/byte_4"
+        android:clickable="true"
+        android:focusable="true"/>
+    
+    <TextView
+        android:id="@+id/byte_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="00"
+        android:fontFamily="monospace"
+        app:layout_constraintStart_toEndOf="@id/byte_3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/byte_5"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <TextView
+        android:id="@+id/byte_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="00"
+        android:fontFamily="monospace"
+        app:layout_constraintStart_toEndOf="@id/byte_4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/byte_6"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <TextView
+        android:id="@+id/byte_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="00"
+        android:fontFamily="monospace"
+        app:layout_constraintStart_toEndOf="@id/byte_5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/byte_7"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <!--
+    
+    <TextView
+        android:id="@+id/byte_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="00"
+        android:fontFamily="monospace"
+        app:layout_constraintStart_toEndOf="@id/byte_6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/byte_8" />
+
+    <TextView
+        android:id="@+id/byte_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="00"
+        android:fontFamily="monospace"
+        app:layout_constraintStart_toEndOf="@id/byte_7"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/byte_9" />
+
+    <TextView
+        android:id="@+id/byte_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="00"
+        android:fontFamily="monospace"
+        app:layout_constraintStart_toEndOf="@id/byte_8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/byte_10"/>
+
+    <TextView
+        android:id="@+id/byte_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="00"
+        android:fontFamily="monospace"
+        app:layout_constraintStart_toEndOf="@id/byte_9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/byte_11"/>
+
+    <TextView
+        android:id="@+id/byte_11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="00"
+        android:fontFamily="monospace"
+        app:layout_constraintStart_toEndOf="@id/byte_10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/byte_12"/>
+
+    <TextView
+        android:id="@+id/byte_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="00"
+        android:fontFamily="monospace"
+        app:layout_constraintStart_toEndOf="@id/byte_11"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/byte_13"/>
+
+    <TextView
+        android:id="@+id/byte_13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="00"
+        android:fontFamily="monospace"
+        app:layout_constraintStart_toEndOf="@id/byte_12"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/byte_14"/>
+
+    <TextView
+        android:id="@+id/byte_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="00"
+        android:fontFamily="monospace"
+        app:layout_constraintStart_toEndOf="@id/byte_13"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/byte_15"/>
+
+    -->
+
+    <TextView
+        android:id="@+id/byte_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="00"
+        android:fontFamily="monospace"
+        app:layout_constraintStart_toEndOf="@id/byte_6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

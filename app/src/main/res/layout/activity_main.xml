@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/next_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Next instruction"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+        android:id="@+id/next_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="monospace"
+        android:text="@string/standard_instruction"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/next_label"
+        app:layout_constraintTop_toTopOf="@id/next_label" />
+
+    <TextView
+        android:id="@+id/dis_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Disassembly"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/next_label"
+        app:layout_constraintTop_toBottomOf="@id/next_label" />
+
+    <TextView
+        android:id="@+id/dis_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/please_load"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/next_content"
+        app:layout_constraintTop_toTopOf="@id/dis_label" />
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.2dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/darker_gray"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dis_label" />
+
+    <ImageView
+        android:id="@+id/image_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/register_label"
+        app:layout_constraintBottom_toBottomOf="@id/register_label"
+        app:layout_constraintEnd_toStartOf="@id/register_label"
+        app:srcCompat="@drawable/ic_baseline_list_24" />
+
+    <TextView
+        android:id="@+id/register_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:text="Registers"
+        app:layout_constraintStart_toEndOf="@id/image_register"
+        app:layout_constraintTop_toBottomOf="@id/dis_label"
+        app:layout_constraintBottom_toTopOf="@id/register_recycler" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/register_recycler"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/memory_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_label"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    <View
+        android:id="@+id/separator2"
+        android:layout_width="fill_parent"
+        android:layout_height="0.2dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/darker_gray"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_recycler" />
+
+    <ImageView
+        android:id="@+id/image_memory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/memory_label"
+        app:layout_constraintBottom_toBottomOf="@id/memory_label"
+        app:layout_constraintEnd_toStartOf="@id/memory_label"
+        app:srcCompat="@drawable/ic_baseline_apps_24" />
+
+    <TextView
+        android:id="@+id/memory_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Memory"
+        app:layout_constraintBottom_toTopOf="@id/memory_recycler"
+        app:layout_constraintStart_toEndOf="@id/image_memory"
+        app:layout_constraintTop_toBottomOf="@id/register_recycler" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/memory_recycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/input"
+        app:layout_constraintEnd_toStartOf="@id/image_flags"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/memory_label" />
+
+    <ImageView
+        android:id="@+id/image_flags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/memory_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/memory_recycler"
+        app:layout_constraintTop_toTopOf="@id/memory_label"
+        app:srcCompat="@drawable/ic_baseline_outlined_flag_24" />
+
+    <View
+        android:id="@+id/separator3"
+        android:layout_width="fill_parent"
+        android:layout_height="0.2dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/darker_gray"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/memory_recycler" />
+
+    <ImageView
+        android:id="@+id/image_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/input"
+        app:layout_constraintBottom_toBottomOf="@id/input"
+        app:layout_constraintEnd_toStartOf="@id/input"
+        app:srcCompat="@drawable/ic_baseline_switch_left_24" />
+
+    <TextView
+        android:id="@+id/input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Input"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/output"
+        app:layout_constraintStart_toEndOf="@id/image_in"
+        app:layout_constraintTop_toBottomOf="@id/memory_recycler"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/image_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/output"
+        app:layout_constraintBottom_toBottomOf="@id/output"
+        app:layout_constraintEnd_toStartOf="@id/output"
+        app:srcCompat="@drawable/ic_baseline_switch_right_24" />
+
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="Output"
+        app:layout_constraintStart_toEndOf="@id/image_out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        />
+
+    <TextView
+        android:id="@+id/zf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ZF"
+        app:layout_constraintEnd_toEndOf="@+id/image_flags"
+        app:layout_constraintStart_toStartOf="@+id/image_flags"
+        app:layout_constraintTop_toBottomOf="@+id/image_flags"
+        app:layout_constraintBottom_toTopOf="@id/of"/>
+
+    <TextView
+        android:id="@+id/of"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OF"
+        app:layout_constraintEnd_toEndOf="@+id/image_flags"
+        app:layout_constraintStart_toStartOf="@+id/image_flags"
+        app:layout_constraintTop_toBottomOf="@+id/zf"
+        app:layout_constraintBottom_toTopOf="@id/cf"/>
+
+    <TextView
+        android:id="@+id/cf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CF"
+        app:layout_constraintEnd_toEndOf="@+id/image_flags"
+        app:layout_constraintStart_toStartOf="@+id/image_flags"
+        app:layout_constraintTop_toBottomOf="@+id/of"
+        app:layout_constraintBottom_toTopOf="@id/sf"/>
+
+    <TextView
+        android:id="@+id/sf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sf"
+        app:layout_constraintBottom_toBottomOf="@+id/memory_recycler"
+        app:layout_constraintEnd_toEndOf="@+id/image_flags"
+        app:layout_constraintStart_toStartOf="@+id/image_flags"
+        app:layout_constraintTop_toBottomOf="@+id/cf" />
+
+    <View
+        android:id="@+id/separator4"
+        android:layout_width="0.2dp"
+        android:layout_height="0dp"
+        android:background="@android:color/darker_gray"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@id/memory_recycler"
+        app:layout_constraintEnd_toStartOf="@id/image_flags"
+        app:layout_constraintTop_toBottomOf="@id/separator2"
+        app:layout_constraintBottom_toTopOf="@id/separator3"/>
+
+    <Switch
+        android:id="@+id/switchLowHigh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Low"
+        app:layout_constraintTop_toTopOf="@id/memory_label"
+        app:layout_constraintBottom_toBottomOf="@id/memory_label"
+        app:layout_constraintEnd_toStartOf="@id/separator4"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

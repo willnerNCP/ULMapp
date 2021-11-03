@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".IOActivity">
+
+    <ImageView
+        android:id="@+id/io_image_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/io_label_in"
+        app:layout_constraintBottom_toBottomOf="@id/io_label_in"
+        app:layout_constraintEnd_toStartOf="@id/io_label_in"
+        app:srcCompat="@drawable/ic_baseline_switch_left_24" />
+
+    <TextView
+        android:id="@+id/io_label_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Input"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/io_image_in"
+        app:layout_constraintBottom_toTopOf="@id/io_scroller_in"/>
+
+    <Button
+        android:id="@+id/io_load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/io_label_in"
+        app:layout_constraintBottom_toBottomOf="@id/io_label_in"
+        android:layout_marginEnd="16dp"
+        android:text="Load from file"
+        />
+
+    <ScrollView
+        android:id="@+id/io_scroller_in"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/io_label_out"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/io_label_in">
+
+        <EditText
+            android:id="@+id/ioInput"
+            android:textSize="20sp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </ScrollView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.2dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/darker_gray"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/io_scroller_in" />
+
+    <ImageView
+        android:id="@+id/io_image_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/io_label_out"
+        app:layout_constraintBottom_toBottomOf="@id/io_label_out"
+        app:layout_constraintEnd_toStartOf="@id/io_label_out"
+        app:srcCompat="@drawable/ic_baseline_switch_right_24" />
+
+    <TextView
+        android:id="@+id/io_label_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Output"
+        android:textSize="20sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toBottomOf="@id/io_scroller_in"
+        app:layout_constraintStart_toEndOf="@id/io_image_out"
+        app:layout_constraintBottom_toTopOf="@id/io_scroller_out"/>
+
+    <Button
+        android:id="@+id/io_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/io_label_out"
+        app:layout_constraintBottom_toBottomOf="@id/io_label_out"
+        android:layout_marginEnd="16dp"
+        android:text="Save to file"
+        />
+
+    <ScrollView
+        android:id="@+id/io_scroller_out"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/io_label_out">
+
+        <TextView
+            android:id="@+id/ioOutput"
+            android:layout_width="fill_parent"
+            android:textSize="20sp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:layout_height="fill_parent" />
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

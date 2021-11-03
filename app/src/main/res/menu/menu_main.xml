@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_run"
+        android:icon="@drawable/ic_baseline_play_arrow_24"
+        android:title="Run"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_step"
+        android:icon="@drawable/ic_baseline_redo_24"
+        android:title="Step"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_reset"
+        android:icon="@drawable/ic_baseline_settings_backup_restore_24"
+        android:title="Reset"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_load"
+        android:icon="@drawable/ic_baseline_add_24"
+        android:title="Load program"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_io"
+        android:icon="@drawable/ic_baseline_compare_arrows_24"
+        android:title="Open I/O"
+        app:showAsAction="ifRoom"/>
+
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_settings"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Settings"
+        app:showAsAction="never"/>
+
+</menu>
